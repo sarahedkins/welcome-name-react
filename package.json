@@ -4,12 +4,19 @@
   "description": "React component to welcome a user",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "build": "cross-env BABEL_ENV=production ./node_modules/.bin/webpack --config webpack.config.production.js",
+    "build": "cross-env BABEL_ENV=production ./node_modules/.bin/webpack --config webpack.config.js",
     "lint": "eslint app",
     "test": "npm run lint",
-    "build-start": "npm run build && npm run start"
+    "prepack": "npm run build"
   },
+  "files": [
+    "dist",
+    "scripts",
+    "webpack.config.js",
+    "license.md",
+    "index.js",
+    "Procfile"
+  ],
   "author": "Sarah Edkins [edkins.sarah@gmail.com]",
   "license": "MIT",
   "dependencies": {

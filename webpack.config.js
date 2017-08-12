@@ -2,15 +2,14 @@ const webpack = require('webpack');
 const path = require('path');
 
 module.exports = {
-  entry: './scripts/index',
+  entry: './scripts/index.js',
   output: {
-    path: path.join(__dirname, 'static'),
+    path: path.join(__dirname, 'dist'),
     filename: 'bundle.js',
-    publicPath: '/',
     libraryTarget: 'commonjs2'
   },
   resolve: {
-    extensions: ['', '.js', 'css']
+    extensions: ['', '.js', '.jsx', 'css']
   },
   devtool: 'source-map',
   plugins: [
