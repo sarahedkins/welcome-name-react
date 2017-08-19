@@ -40,7 +40,7 @@ export class Welcome extends Component {
   render() {
     if (this.state.submittedName && this.state.name) {
       return (
-        <div>
+        <div className={this.props.className} style={this.props.style}>
           <h2>
             Welcome {this.state.name}!
           </h2>
@@ -52,7 +52,7 @@ export class Welcome extends Component {
       );
     }
     return (
-      <div>
+      <div className={this.props.className} style={this.props.style}>
         What is your name?
         <input type="text" onChange={this.handleNameInput} />
         <button type="button" onClick={this.submitName}>
